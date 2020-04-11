@@ -20,6 +20,20 @@
             app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <Button
+            android:id="@+id/act_change"
+            android:layout_width="212dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="176dp"
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFC107"
+            android:backgroundTintMode="src_in"
+            android:text="Open the next page)"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -66,19 +80,6 @@
             android:text="Value"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button2" />
-
-    <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="29dp"
-            android:layout_marginBottom="418dp"
-            android:text="Hui"
-            app:layout_constraintBottom_toTopOf="@+id/textView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

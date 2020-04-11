@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -17,7 +18,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private EditText password;
-    private Button button, button_alert, button2;
+    private Button button, button_alert, act_change;
     private RatingBar rating;
     private TextView text_show;
 
@@ -32,7 +33,15 @@ public class MainActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.editText);
         button = (Button) findViewById(R.id.button);
         button_alert = (Button) findViewById(R.id.alert);
-        button2 = (Button) findViewById(R.id.button2);
+        act_change = (Button) findViewById(R.id.act_change);
+
+        act_change.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(".SecondActivity");
+                startActivity(intent);
+            }
+        });
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,16 +56,6 @@ public class MainActivity extends AppCompatActivity {
                 ).show();
             }
         });
-
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                button2.setText("oops)");
-                button2.setBackgroundTintList(ColorStateList.valueOf(Color.RED));
-            }
-        });
-
 
         rating = (RatingBar) findViewById(R.id.ratingBar);
         text_show = (TextView) findViewById(R.id.textView);
